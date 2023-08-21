@@ -6,6 +6,8 @@
   --cornflower: #e7e9fc;
   --slate: #434455;
   --white: #fff;
+  --green: #31d0aa;
+  --lightslate: #8e8f99;
 }
 * {
   margin: 0;
@@ -127,6 +129,7 @@ body {
 }
 .header-background {
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
@@ -135,6 +138,12 @@ body {
   background: var(--navyblue);
   background-image: linear-gradient(hsl(0 0% 0%/ 0.5), hsl(0 0% 0%/ 0.5)),
     url("../images/people-office.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  height: 600px;
+  width: 1440px;
 }
 .front-button {
   padding: 16px 32px;
@@ -255,7 +264,6 @@ body {
 .person-position {
   color: var(--slate);
   text-align: center;
-
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
@@ -271,9 +279,18 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--iris);
   width: 40px;
   height: 40px;
+  fill: var(--white);
+  background-color: var(--iris, #4d5ae5);
+  border-radius: 50%;
+}
+.person-media-icon {
+  width: 16px;
+  height: 16px;
+}
+.team-icon:hover {
+  background-color: var(--green);
 }
 /* customers */
 .customers {
@@ -299,6 +316,7 @@ body {
   width: 104px;
   height: 56px;
   flex-shrink: 0;
+  fill: var(--lightslate);
 }
 
 .customer-box:hover {
@@ -350,7 +368,12 @@ body {
   letter-spacing: 0.32px;
   width: fit-content;
 }
-
+.portfolio-card :hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
 /* Footer */
 
 .footer {
@@ -360,13 +383,14 @@ body {
 }
 .footer-flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  padding-top: 101.5px;
 }
 .logo-footer {
-  margin-top: 101.5px;
+  /* margin-top: 101.5px; */
   width: 115px;
   font-family: Raleway;
   font-size: 18px;
@@ -384,6 +408,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
+}
+.footer-social-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 .footer-social-txt {
   color: var(--white);
@@ -412,6 +441,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: var(--white);
 }
 
 /* buttons */
