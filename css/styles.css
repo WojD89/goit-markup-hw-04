@@ -328,7 +328,7 @@ body {
 }
 /* Portfolio */
 
-.filter-button {
+.filter-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
@@ -346,11 +346,15 @@ body {
 
 .figcap-content {
   padding: 32px 16px;
+  pointer-events: none;
 }
 .figcap-border {
   border: 1px solid var(--cornflower);
   border-top: none;
   background: var(--background);
+}
+.portfolio-img {
+  pointer-events: none;
 }
 .portfolio-img-title {
   color: var(--navyblue);
@@ -374,6 +378,7 @@ body {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
 /* Footer */
 
 .footer {
@@ -476,7 +481,9 @@ body {
 .button:hover,
 .button:focus {
   border-radius: 4px;
-  border: 1px solid var(--cornflower);
+  border: none;
   background: var(--iris);
   color: var(--cloud);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
