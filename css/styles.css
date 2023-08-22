@@ -290,7 +290,7 @@ body {
   height: 16px;
 }
 .team-icon:hover {
-  background-color: var(--green);
+  background-color: var(--ocean);
 }
 /* customers */
 .customers {
@@ -481,7 +481,7 @@ body {
 .button:hover,
 .button:focus {
   border-radius: 4px;
-  border: none;
+  border-color: var(--ocean);
   background: var(--iris);
   color: var(--cloud);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
